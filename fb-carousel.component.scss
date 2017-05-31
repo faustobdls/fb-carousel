@@ -1,0 +1,174 @@
+$celular: 600px;
+$tablet: 1000px;
+
+$bulletp: 8px;
+$bulletm: 13px;
+$bulletg: 18px;
+$bottom-bulletp: 10px;
+$bottom-bulletm: 15px;
+$bottom-bulletg: 20px;
+
+#banner{
+    width: 100%;
+    position: relative;
+    *{
+        transition: all 1s ease-in-out;
+        z-index: 10;
+    }
+    .wrap{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        .items{
+            height: auto;
+            position: relative;
+            .item{
+                position: relative;
+                float: left;
+                width: 100vw;
+                height: auto;
+                display: block;
+                img{
+                    position: relative;
+                    display: block;
+                }
+                span{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 30px;
+                    background-color: rgba(168, 0, 0, 0.95);
+                    color: white;
+                    text-transform: uppercase;
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    padding: 10px;
+                }
+                a.button{
+                    position: absolute;
+                    background-color: rgba(168, 0, 0, 0.95);
+                    color: white;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: x-large;
+                    cursor: help;
+                    padding: 10px;
+                    z-index: 150;
+                }
+            }
+        }
+    }
+    .controls{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .arow{
+            width: 5%;
+            height: 100%;
+            position: absolute;
+            cursor: pointer;
+            display: flex;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 6rem;
+            text-decoration: none;
+            justify-content: center;
+            align-content: center;
+            line-height: 100%;
+            span{
+                align-self: center;
+                padding: 30px;
+                img{
+                    height: 60px;
+                    @media screen and (min-width: $celular) {
+                        height: 25px;
+                    }
+                    @media screen and (min-width: $tablet) {
+                        height: 25px;
+                    }
+                }
+            }
+        }
+        a.button{
+            position: absolute;
+            background-color: rgba(168, 0, 0, 0.95);
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: x-large;
+            cursor: help;
+            padding: 10px;
+            z-index: 150;
+            transition: all .6s ease;
+            top: 100vh;
+        }
+        .arow.left{
+            top: 0px;
+            left: 0px;
+            @media screen and (max-width: $celular) {
+                left: 10px;
+            }
+            @media screen and (min-width: $tablet) {
+                left: 10px;
+            }
+        }
+        .arow.right{
+            top: 0px;
+            right: 0px;
+            @media screen and (max-width: $celular) {
+                right: 10px;
+            }
+            @media screen and (min-width: $tablet) {
+                right: 10px;
+            }
+        }
+        ul.bullets{
+            bottom: $bottom-bulletg;
+            @media screen and (min-width: $celular) {
+                bottom: $bottom-bulletp;
+            }
+            @media screen and (min-width: $tablet) {
+                bottom: $bottom-bulletm;
+            }
+            position: absolute;
+            z-index: 10000;
+            display: block;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                display: block;
+                width: $bulletg;
+                height: $bulletg;
+                @media screen and (min-width: $celular) {
+                    width: $bulletp;
+                    height: $bulletp;
+                }
+                @media screen and (min-width: $tablet) {
+                    width: $bulletm;
+                    height: $bulletm;
+                }
+                border: 1px solid white;
+                border-radius: 40px;
+                float: left;
+                margin: 0px;
+                padding: 0px;
+                margin-left: 10px;
+                cursor: pointer;
+
+            }
+            li:first-child{
+                margin-left: 0px;
+            }
+        }
+    }
+}

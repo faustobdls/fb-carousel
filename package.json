@@ -1,0 +1,21 @@
+{
+  "name": "fb-carousel",
+  "version": "1.0.1",
+  "description": "carousel css3",
+  "main": "fb-carousel/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faustobdls/fb-carousel.git"
+  },
+  "keywords": [
+    "carousel",
+    "angular2",
+    "angular4",
+    "simple"
+  ],
+  "author": "Fautso Blanco",
+  "license": "MIT"
+}

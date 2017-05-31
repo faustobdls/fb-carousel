@@ -1,0 +1,23 @@
+<div id="banner">
+    <div class="wrap">
+        <div class="items" [style.width.vw]="banners.length * 100" [style.left.vw]="position * 100">
+            <div *ngFor="let item of banners"  class="item">
+                <img [src]="item?.bg" width="100%" alt="">
+                <span *ngIf="item?.exibir_title"  [innerHtml]="item?.title"></span>
+            </div>
+        </div>
+    </div>
+    <div class="controls" (mouseenter)="stop()" (mouseleave)="start()">
+        <a href="#" class="arow left" (click)="right()"><span><img [src]="arow.left" alt=""> </span></a>
+        <a class="button"  
+            [href]="selected?.action_button?.destino" 
+            [innerHtml]="selected?.action_button?.title" 
+            [style.left]="selected?.action_button?.position?.x" 
+            [style.top]="selected?.action_button?.exibir ? selected?.action_button?.position?.y : '100vw'"
+        ></a>
+        <a href="#" class="arow right" (click)="left()"><span><img [src]="arow.right" alt=""></span></a>
+        <ul class="bullets" [style.left]="'calc(50% - ' + ((banners.length * 20)/2 + ((banners.length-1) * 10)/2) + 'px)'">
+            <li *ngFor="let bullet of banners" (click)="goTo(bullet.id)" [style.backgroundColor]="(-position === bullet.id) ? 'white' : ''"></li>
+        </ul>
+    </div>
+</div>
