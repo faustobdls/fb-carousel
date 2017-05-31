@@ -1,8 +1,8 @@
 # fb-carousel
 
-´npm install fb-carousel --save´
+`npm install fb-carousel --save`
 
-´import { FbCarouselComponent } from 'fb-carousel';´
+`import { FbCarousel } from 'fb-carousel';`
 
 no component que for usar tem que criar o objeto com:
 
