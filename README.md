@@ -11,7 +11,6 @@ Use this component is easy, just:
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"
       ],
-    ``` 
   3. Add `import 'hammerjs';` in `app.module.ts` file;
   4. `npm install fb-carousel --save` inside your Angular project
   5. `import { FbCarousel } from 'fb-carousel';` import the component inseide your `app.module.ts` file
