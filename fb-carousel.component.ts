@@ -1,17 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
+import 'hammerjs';
 
 @Component({
   selector: 'fb-carousel',
   templateUrl: './fb-carousel.component.html',
   styleUrls: ['./fb-carousel.component.scss']
 })
-export class FbCarouselComponent implements OnInit {
+export class FbCarousel implements OnInit {
+
+  // constant for swipe action: left or right
+  SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
 
   constructor() { }
 
   @Input('slides') banners: any[];
-  @Input('delay') delay: number; 
+  @Input('delay') delay: number;
   @Input('arows') arow: any;
 
   position: number = 0;
@@ -28,7 +32,7 @@ export class FbCarouselComponent implements OnInit {
     { id: 3, bg: '/assets/banner.jpg', title: 'Banner 4', exibir_title: false },
   ];
   selected: any = null;
-  
+
   ngOnInit() {
     this.selected = this.getSelected(this.position);
     this.start();
@@ -68,7 +72,19 @@ export class FbCarouselComponent implements OnInit {
   }
   monitoring(pos, bullet){
     console.log(pos, bullet);
-    
+  }
+  // action triggered when user swipes
+  swipe(action = this.SWIPE_ACTION.RIGHT) {
+      
+      // swipe right, next avatar
+      if (action === this.SWIPE_ACTION.RIGHT) {
+          this.right();
+      }
+
+      // swipe left, previous avatar
+      if (action === this.SWIPE_ACTION.LEFT) {
+          this.left();
+      }
   }
 
 }

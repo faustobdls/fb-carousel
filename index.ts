@@ -1,1 +1,1 @@
-export { FbCarouselComponent } from './fb-carousel.component';
+export { FbCarousel } from './fb-carousel.component';

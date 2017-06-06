@@ -5,10 +5,18 @@ Angular component to be able to make carousel easily.
 ## Getting started
 
 Use this component is easy, just: 
-  1. `npm install fb-carousel --save` inside your Angular project
-  2. `import { FbCarousel } from 'fb-carousel';` import the component inseide your `app.module.ts` file
-  2. inside your slide component use this two object to create the `banners` and the `arrows`  
-  4. finally, but not least use the component on your html slide file
+  1. Install dependencies `npm install hammerjs --save`
+  2. Configure `hammerjs` in `.angular-cli` add in:
+    1. ```json
+      "scripts": [
+        "../node_modules/hammerjs/hammer.min.js"
+      ],
+    ``` 
+  3. Add `import 'hammerjs';` in `app.module.ts` file;
+  4. `npm install fb-carousel --save` inside your Angular project
+  5. `import { FbCarousel } from 'fb-carousel';` import the component inseide your `app.module.ts` file
+  6. inside your slide component use this two object to create the `banners` and the `arrows`  
+  7. finally, but not least use the component on your html slide file
 
 If you are a learning learner you can consult [this](https://github.com/yesroh/fb-carousel-example) repository where that component is used.
 
@@ -43,3 +51,7 @@ HTML element:
 ## Future features
   - Improve title presentation and features
   - Improve bullet presentation and features
+
+## CHANGELOG
+  - Add swipe events left and right
+  - Update `README.md` file

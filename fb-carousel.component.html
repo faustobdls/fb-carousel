@@ -1,13 +1,13 @@
 <div id="banner">
     <div class="wrap">
         <div class="items" [style.width.vw]="banners.length * 100" [style.left.vw]="position * 100">
-            <div *ngFor="let item of banners"  class="item">
+            <div *ngFor="let item of banners" class="item">
                 <img [src]="item?.bg" width="100%" alt="">
                 <span *ngIf="item?.exibir_title"  [innerHtml]="item?.title"></span>
             </div>
         </div>
     </div>
-    <div class="controls" (mouseenter)="stop()" (mouseleave)="start()">
+    <div class="controls" (mouseenter)="stop()" (mouseleave)="start()" (swipeleft)="swipe($event.type)" (swiperight)="swipe($event.type)">
         <a href="#" class="arow left" (click)="right()"><span><img [src]="arow.left" alt=""> </span></a>
         <a class="button"  
             [href]="selected?.action_button?.destino" 

@@ -1,10 +1,13 @@
 {
   "name": "fb-carousel",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "carousel css3",
-  "main": "fb-carousel/index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8"
   },
   "repository": {
     "type": "git",
@@ -16,6 +19,6 @@
     "angular4",
     "simple"
   ],
-  "author": "Fautso Blanco",
+  "author": "Fausto Blanco",
   "license": "MIT"
 }
