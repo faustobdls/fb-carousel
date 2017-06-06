@@ -7,7 +7,7 @@ Angular component to be able to make carousel easily.
 Use this component is easy, just: 
   1. Install dependencies `npm install hammerjs --save`
   2. Configure `hammerjs` in `.angular-cli` add in: 
-    ```json 
+    - ```json 
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"
       ],
